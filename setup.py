@@ -28,7 +28,7 @@ with open('LICENSE.md') as f:
     license = f.read()
 
 setup(name='slimta',
-      version='0.9.0',
+      version='0.9.1',
       author='Ian Good',
       author_email='ian@icgood.net',
       description='Configurable MTA based on the python-slimta library.',
@@ -39,7 +39,11 @@ setup(name='slimta',
       python_requires='~=3.11',
       include_package_data=True,
       packages=find_namespace_packages(include=['slimta.*']),
-      install_requires=['python-slimta[spf] ~= 5.0', 'passlib', 'PyYAML'],
+      install_requires=[
+          'python-slimta[spf] ~= 5.0',
+          'pysasl < 1.1',
+          'passlib',
+          'PyYAML'],
       extras_require={
           'optional': ['python-slimta[redis,aws,disk] ~= 5.0']},
       entry_points={'console_scripts': [
