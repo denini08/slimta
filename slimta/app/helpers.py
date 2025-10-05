@@ -268,9 +268,9 @@ def get_relay_credentials(creds):
 
 def is_running_as_admin():
     """Check if the current process is running with administrative privileges.
-    
-    Returns True if running as root on Unix-like systems or as Administrator on Windows.
-    Returns False otherwise.
+
+    Returns True if running as root on Unix-like systems or as Administrator on
+    Windows. Returns False otherwise.
     """
     try:
         # Unix-like systems (Linux, macOS, etc.)
